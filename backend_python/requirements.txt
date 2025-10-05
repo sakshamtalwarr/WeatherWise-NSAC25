@@ -1,0 +1,7 @@
+flask
+flask_cors
+xarray
+netcdf4
+numpy
+requests
+pydap

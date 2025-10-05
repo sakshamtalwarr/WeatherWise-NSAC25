@@ -1,0 +1,140 @@
+WeatherWise
+
+A NASA Space Apps Challenge Project
+By Saksham Talwar & Harshita
+
+1. Project Description
+WeatherWise is an interactive web application designed to make historical climate data accessible and engaging for everyone. For any location on Earth, the app can retrieve and visualize 20 years of weather data for a specific day of the year, allowing users to uncover trends, observe changes over time, and gain a deeper understanding of long-term weather patterns.
+
+Our goal is to transform complex historical datasets into a simple, intuitive, and visually compelling experience, answering the question: "What was the weather like on this day over the last two decades?"
+
+2. Features
+Interactive Global Map: A fast, dark-themed global map powered by Leaflet and React-Leaflet serves as the primary interface.
+
+Multi-Faceted Location Selection:
+
+Pan-to-Select: A fixed pin in the center of the map allows users to simply drag the map to select any coordinate.
+
+Search: A built-in search bar allows users to find locations by name.
+
+Use My Location: Automatically detects the user's current location, animates the map, and displays the location's name.
+
+Interactive Calendar: A clean, modal calendar for easy date selection.
+
+20-Year Data Visualization: After selecting a location and date, the app fetches and displays 20 years of historical data in three distinct charts:
+
+Temperature History
+
+Wind Speed History
+
+Precipitation History
+
+Dynamic 3D Weather Icons: A react-three-fiber canvas renders a 3D animated icon (sun, clouds, rain) that dynamically represents the overall historical weather for the selected day.
+
+Data Summaries & Insights:
+
+Calculates and displays historical averages for temperature, wind speed, and the chance of rain.
+
+Provides thematic suggestions, such as "Will it Rain on Your Parade?", based on the data.
+
+User Experience:
+
+Features a cosmic-themed UI with an animated particle background.
+
+Includes a "Save Location" feature to store a user's favorite spot in the browser.
+
+A responsive layout that transitions smoothly between the initial map view and the results panel.
+
+3. Technology Stack
+Frontend
+Framework: React.js
+
+Mapping: react-leaflet with custom components
+
+Data Visualization: chart.js and react-chartjs-2
+
+3D Rendering: react-three-fiber and drei
+
+UI Components: react-calendar, react-icons
+
+Background Animation: tsparticles
+
+Backend
+Framework: Python (Flask)
+
+API: A simple Flask server provides endpoints to fetch and process weather data.
+
+CORS: Flask-Cors to handle requests from the React frontend.
+
+4. Data Sources
+Historical Weather Data: We utilize the Open-Meteo Historical Weather API, a free and open-source service that provides aggregated historical data from global weather models like ERA5. This allows us to query 20 years of daily weather parameters for any latitude and longitude.
+
+Reverse Geocoding: To convert coordinates from the "Use My Location" feature into a human-readable address, we use the free OpenStreetMap Nominatim API.
+
+5. How to Run the Project Locally
+Prerequisites
+Node.js and npm
+
+Python and pip
+
+Backend Setup
+Navigate to the backend_python directory:
+
+Bash
+
+cd backend_python
+Create and activate a virtual environment:
+
+Bash
+
+# For Windows
+python -m venv venv
+.\venv\Scripts\activate
+Install the required packages:
+
+Bash
+
+pip install Flask Flask-Cors requests
+Run the Flask server:
+
+Bash
+
+py app.py
+The backend will now be running on http://127.0.0.1:5000.
+
+Frontend Setup
+Open a new terminal and navigate to the frontend_react directory:
+
+Bash
+
+cd frontend_react
+Install the necessary dependencies:
+
+Bash
+
+npm install
+Run the React development server:
+
+Bash
+
+npm start
+The application will open automatically in your browser at http://localhost:3000.
+
+6. How to Use the Application
+Upon launching, you are greeted with a welcome screen. Click "Start Exploring".
+
+The main dashboard displays a map centered on NASA HQ.
+
+Select a location in one of three ways:
+
+Pan the map until the central pin is over your desired spot.
+
+Use the search bar at the top of the map.
+
+Click "Use My Location" to have the app find you.
+
+Click the date button to open the calendar and select a day of the year.
+
+Click the "Get Historical Analysis" button.
+
+The dashboard will transition to the results view, displaying the summary cards, 20-year charts, and the animated 3D weather icon.
