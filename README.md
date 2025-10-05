@@ -1,4 +1,4 @@
-WeatherWise 🚀
+WeatherWise 🚀: A Historical Weather Data Visualizer
 An interactive web application for the NASA Space Apps Challenge that visualizes 20 years of historical weather data for any location on Earth.
 
 Table of Contents
@@ -18,7 +18,7 @@ Future Work
 
 Acknowledgments
 
-About The Project
+About the Project
 WeatherWise is our solution to the NASA Space Apps Challenge: "Will it Rain on Your Parade?".
 
 The challenge was to make vast, complex historical climate data accessible to everyone. We built an interactive web application where users can select any location on a global map, choose a specific day of the year, and instantly visualize 20 years of weather data—including temperature, precipitation, and wind speed trends.
@@ -42,20 +42,54 @@ Technology Stack
 The project is a full-stack application built with modern, open-source technologies.
 
 Frontend
-Framework: React.js
+Component
 
-Mapping: React-Leaflet
+Technology
 
-Charts: Chart.js
+Purpose
 
-3D Graphics: React Three Fiber
+Framework
 
-UI: React Calendar & tsparticles
+React.js
+
+Core application structure
+
+Mapping
+
+React-Leaflet
+
+Interactive global map component
+
+Charts
+
+Chart.js
+
+Visualizing 20-year weather trends
+
+3D Graphics
+
+React Three Fiber
+
+Dynamic 3D weather icon animation
+
+UI/UX
+
+React Calendar & tsparticles
+
+Date selection and animated background
 
 Backend
-Framework: Python (Flask)
+Component
 
-Function: Serves as a lightweight API to fetch and process data from external sources.
+Technology
+
+Purpose
+
+Framework
+
+Python (Flask)
+
+Serves as a lightweight API to fetch and process data from external sources.
 
 Data Sources
 NASA Data: Our project uses data derived from NASA satellite observations. We access this through the Open-Meteo API, which relies on the ERA5 global reanalysis dataset. This dataset is fundamentally built by assimilating satellite observations from missions conducted and supported by NASA, such as those from the Earth Observing System (EOS).
@@ -66,6 +100,8 @@ Getting Started
 To get a local copy up and running, follow these simple steps.
 
 Prerequisites
+You need to have the following installed on your system:
+
 Node.js & npm: https://nodejs.org/
 
 Python & pip: https://www.python.org/
@@ -73,27 +109,27 @@ Python & pip: https://www.python.org/
 Installation
 Clone the repo
 
-Bash
+git clone [https://github.com/your_username/your_repository_name.git](https://github.com/your_username/your_repository_name.git)
 
-git clone https://github.com/your_username/your_repository_name.git
+
 Backend Setup
 
-Bash
-
-cd backend_python
+cd your_repository_name/backend_python
 python -m venv venv
-.\venv\Scripts\activate
+.\venv\Scripts\activate  # Use 'source venv/bin/activate' on Linux/macOS
 pip install Flask Flask-Cors requests
 py app.py
+
+
 (The backend will be running on http://127.0.0.1:5000)
 
 Frontend Setup (in a new terminal)
 
-Bash
-
-cd frontend_react
+cd your_repository_name/frontend_react
 npm install
 npm start
+
+
 (The app will open at http://localhost:3000)
 
 How to Use
@@ -106,11 +142,11 @@ Click the "Get Historical Analysis" button.
 View the results, including summary cards, 20-year trend charts, and the 3D weather icon.
 
 Future Work
-Add more data parameters (e.g., humidity, pressure).
+More Data Parameters: Add more data parameters (e.g., humidity, pressure).
 
-Implement a data comparison feature for two different locations.
+Comparison Feature: Implement a data comparison feature for two different locations.
 
-Create user accounts to save and share multiple analyses.
+User Accounts: Create user accounts to save and share multiple analyses.
 
 Acknowledgments
 This project is a submission for the NASA International Space Apps Challenge.
@@ -118,12 +154,3 @@ This project is a submission for the NASA International Space Apps Challenge.
 All data is made available through incredible open-source APIs.
 
 Special thanks to the organizers and the open-source community.
-
-
-Sources
-
-
-
-
-
-
